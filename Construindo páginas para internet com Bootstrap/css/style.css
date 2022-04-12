@@ -1,0 +1,27 @@
+body {
+    font-family: Verdana;
+} 
+
+.navbar {
+    background-color: #BFCCE0;
+}
+
+.quem-somos {
+    background-color: #5C7294;
+    color: white
+}
+
+.margin {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.parceiros {
+    background-color: #2C3747;
+    color: white;
+}
+
+.bg-footer {
+    background-color: black;
+    color: white;
+}
