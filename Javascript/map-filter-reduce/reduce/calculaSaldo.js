@@ -1,26 +1,27 @@
-function calculaSaldo(saldo, itens) {
-	if (!saldo || !itens || !itens.length) return 'Envie todos os parâmetros';
-
-	const saldoFinal = itens.reduce((acc, item) => acc - item.preco, saldo);
-
-	return `O saldo final será de ${saldoFinal} reais`;
-}
-
-lista = [
+const lista = [
 	{
-		preco: 2,
-		nome: 'maçã',
-	},
-	{
+		name: 'Toalha',
 		preco: 30,
-		nome: 'roupa',
 	},
 	{
-		preco: 25,
-		nome: 'carne',
+		name: 'Cereal',
+		preco: 15,
+	},
+	{
+		name: 'Cafe',
+		preco: 15,
 	},
 ];
 
-saldo = 100;
+const saldoDisponivel = 100;
 
-console.log(calculaSaldo(saldo, lista));
+function calculaSaldo(saldoDisponivel, lista) {
+	return lista.reduce(function(prev, current, index) {
+		console.log('rodada', index +1);
+		console.log({ prev });
+		console.log({ current });
+		return prev - current.preco;
+	}, saldoDisponivel);
+}
+
+console.log(calculaSaldo(saldoDisponivel,lista));
